@@ -1,6 +1,6 @@
 # EXNO2DS
 # AIM:
-      To perform Exploratory Data Analysis on the given data set.
+To perform Exploratory Data Analysis on the given data set.
       
 # EXPLANATION:
   The primary aim with exploratory analysis is to examine the data for distribution, outliers and anomalies to direct specific testing of your hypothesis.
@@ -48,6 +48,8 @@ dt.describe()
 dt.shape
 ```
 ![Screenshot 2024-03-15 231547](https://github.com/chandrumathiyazhagan/EXNO2DS/assets/119393023/3f9d7819-6a01-45a7-a415-e0383bb89a2a)
+
+### CATEGORICAL DATA ANALYSIS:
 ```python
 dt.nunique()
 ```
@@ -59,6 +61,7 @@ per=(dt["Survived"].value_counts()/dt.shape[0]*100).round(2)
 per
  ```
  ![Screenshot 2024-03-15 231559](https://github.com/chandrumathiyazhagan/EXNO2DS/assets/119393023/b1285c08-04e3-4fc2-9768-316a8c39cd6a)
+ ### UNIVARIATE ANALYSIS:
 ```python
 sns.countplot(data=dt,x="Survived")
 ```
@@ -74,6 +77,8 @@ dt.rename(columns={'Sex':'Gender'},inplace=True)
 dt
 ```
 ![Screenshot 2024-03-15 231625](https://github.com/chandrumathiyazhagan/EXNO2DS/assets/119393023/93b09703-8c88-4a21-94d1-a7514c7ee401)
+
+### BIVARIATE ANALYSIS:
  ```python
 sns.catplot(x="Gender",col="Survived",kind="count",data=dt,height=5,aspect=.7)
 ```
@@ -94,6 +99,8 @@ sns.scatterplot(x=dt["Age"],y=dt["Fare"])
 sns.jointplot(x="Age",y="Fare",data=dt)
  ```
 ![Screenshot 2024-03-15 231659](https://github.com/chandrumathiyazhagan/EXNO2DS/assets/119393023/58e46e38-37d9-404a-a8cf-cdf9e1c8acf5)
+
+### MULTIVARIATE ANALYSIS:
 ```python
 fig,ax1 = plt.subplots(figsize=(8,5))
 pt=sns.boxplot(ax=ax1,x='Pclass',y='Age',hue='Gender',data=dt)
@@ -114,4 +121,4 @@ sns.heatmap(corr,annot=True)
 ![Screenshot 2024-03-15 231742](https://github.com/chandrumathiyazhagan/EXNO2DS/assets/119393023/7b373422-21da-4513-b779-f8f3132d1a8c)
 
 # RESULT
-          Hence the performing Exploratory Data Analysis on the given data set is successful.
+Hence the performing Exploratory Data Analysis on the given data set is successful.
