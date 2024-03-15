@@ -23,7 +23,7 @@ STEP 7: Use cross tabulation method to quantitatively analyze the relationship b
 STEP 8: Use heatmap method of representation to show relationships between two variables, one plotted on each axis.
 
 ## CODING AND OUTPUT
-     ```python
+```python
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -32,33 +32,32 @@ import seaborn as sns
 dt=pd.read_csv("/content/titanic_dataset.csv")
 
 dt
-     ```
+ ```
 
      ![Screenshot 2024-03-15 231523](https://github.com/chandrumathiyazhagan/EXNO2DS/assets/119393023/2a1b8b69-b138-4cc7-899c-1171fa3d7eea)
 
-       ```python
+```python
 dt.info
-     ```
+```
 
      ![Screenshot 2024-03-15 231532](https://github.com/chandrumathiyazhagan/EXNO2DS/assets/119393023/23f1e963-f5b0-4d38-81ac-1a5a43fe8c85)
 
-       ```python
+```python
 dt.set_index("PassengerId",inplace=True)
 
 dt.describe()
-     ```
+```
 
      ![Screenshot 2024-03-15 231539](https://github.com/chandrumathiyazhagan/EXNO2DS/assets/119393023/ec0a1257-120f-4ce6-a1d8-6ed8f0b6874d)
 
-       ```python
+ ```python
 dt.shape
-     ```
+```
+![Screenshot 2024-03-15 231547](https://github.com/chandrumathiyazhagan/EXNO2DS/assets/119393023/3f9d7819-6a01-45a7-a415-e0383bb89a2a)
 
-     ![Screenshot 2024-03-15 231547](https://github.com/chandrumathiyazhagan/EXNO2DS/assets/119393023/3f9d7819-6a01-45a7-a415-e0383bb89a2a)
-
-       ```python
+```python
 dt.nunique()
-     ```
+```
 
      ![Screenshot 2024-03-15 231552](https://github.com/chandrumathiyazhagan/EXNO2DS/assets/119393023/cfa1d74e-d078-4a30-ac7b-4e636ebc86b1)
 
